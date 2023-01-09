@@ -1,0 +1,9 @@
+.img--principal{
+    height: 150px;
+    width: 100%;
+}
+.imagen{
+    height: 150px;
+    width: 100%;
+    image-rendering:pixelated;
+}

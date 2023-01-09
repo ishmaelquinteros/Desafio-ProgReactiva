@@ -1,23 +1,39 @@
 import { Component, OnInit } from '@angular/core';
 import { ConexionApiService } from 'src/app/Core/Servicios/conexion-api.service';
-import { Observable } from 'rxjs';
-
+import { debounceTime, Observable } from 'rxjs';
+import { FormControl } from '@angular/forms';
 @Component({
   selector: 'app-contenido',
   templateUrl: './contenido.component.html',
   styleUrls: ['./contenido.component.css']
 })
-export class ContenidoComponent implements OnInit {
 
-Personajes: Observable<any> | undefined;
+export class ContenidoComponent {
+
+buscarControl = new FormControl('');
+filtrarPersonje = '';
+
+Personajes$: Observable<any> | undefined;
+
+constructor(private personajesService: ConexionApiService) { 
+ this.getPersonajes();
+
+this.buscarControl.valueChanges.pipe(debounceTime(1000))
+  .subscribe((value => {
+    this.personajesService.filtrarPersonajes(value!).subscribe(()=>
+    this.Personajes$)
+  }))
   
-constructor(private personajesService: ConexionApiService) { }
-
-  ngOnInit(): void {
-    this.getPersonajes();  
-  }
-
-getPersonajes(){
-  this.Personajes = this.personajesService.obtenerPersonajes();
 }
+  
+getPersonajes(){
+  this.Personajes$ = this.personajesService.obtenerPersonajes();
+}
+
+limpiarInput(){
+  if (this.buscarControl){
+  this.buscarControl.setValue("")}
+}
+
+
 }

@@ -8,16 +8,8 @@ import { Observable } from 'rxjs';
 })
 export class AppComponent {
   title = 'ProgramacionReactiva-Quinteros';
- 
-  Personajes: Observable<any> | undefined;
-  
+   
   constructor(private personajesService: ConexionApiService) { }
   
-    ngOnInit(): void {
-      this.getPersonajes();  
-    }
   
-  getPersonajes(){
-    this.Personajes = this.personajesService.obtenerPersonajes();
-  }
 }
