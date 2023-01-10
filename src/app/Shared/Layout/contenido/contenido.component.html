@@ -7,12 +7,12 @@
       </button>
 </mat-form-field>
 
-<div class="grid flex flex-wrap" style="width:100%">
-<div class="col-4 justify-content-center"  
-*ngFor="let personaje of Personajes$ | async">
-    <mat-card class="example-card">
-        <mat-card-header>
-          <mat-card-title> {{personaje.name}} </mat-card-title>
+<div class="grid flex-auto align-items-center justify-content-center" style="width:100%">
+  <div class="col-fixed sm:min-w-max"  
+    *ngFor="let personaje of Personajes$ | async">
+        <mat-card class="sm:min-w-max align-self-center justify-content-center ">
+          <mat-card-header>
+            <mat-card-title style="font-size:medium"> {{personaje.name}} </mat-card-title>
           <mat-card-subtitle></mat-card-subtitle>
         </mat-card-header>
         <img mat-card-image class="h-3" src="{{personaje.thumbnail.path}}.{{personaje.thumbnail.extension}}">

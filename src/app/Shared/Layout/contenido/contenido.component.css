@@ -7,10 +7,12 @@ img.mat-card-image{
     max-width: auto;
 }
 .example-card{
+    align-self: center;
     background-color:whitesmoke;
+    justify-content: space-evenly;
 }
 .example-form-field{
-    width: 30%;
+    width: 100%;
     font-size: 20px;
 }
 a{
