@@ -10,7 +10,7 @@
 <div class="grid flex-auto align-items-center justify-content-center" style="width:100%">
   <div class="col-fixed sm:min-w-max"  
     *ngFor="let personaje of Personajes$ | async">
-        <mat-card class="sm:min-w-max align-self-center justify-content-center ">
+        <mat-card class="sm:min-w-max align-self-center justify-content-center sm:min-w-max">
           <mat-card-header>
             <mat-card-title style="font-size:medium"> {{personaje.name}} </mat-card-title>
           <mat-card-subtitle></mat-card-subtitle>
@@ -20,7 +20,7 @@
           <p></p>
         </mat-card-content>
         <mat-card-actions>
-          <button mat-raised-button color="primary">
+          <button mat-raised-button color="primary" class="w-10 aling-self-center">
           <a href="{{personaje.urls[0].url}}" target="_blank">Details</a></button>
         </mat-card-actions>
       </mat-card>
