@@ -21,7 +21,7 @@ constructor(private personajesService: ConexionApiService) {
 this.buscarControl.valueChanges.pipe(debounceTime(1000))
   .subscribe((value => {
     this.personajesService.filtrarPersonajes(value!).subscribe(()=>
-    this.Personajes$)
+    this.getPersonajes())
   }))
   
 }
