@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ConexionApiService } from 'src/app/Core/Servicios/conexion-api.service';
-import { debounceTime, Observable } from 'rxjs';
+import { debounceTime, Observable, window } from 'rxjs';
 import { FormControl } from '@angular/forms';
 @Component({
   selector: 'app-contenido',
@@ -34,6 +34,5 @@ limpiarInput(){
   if (this.buscarControl){
   this.buscarControl.setValue("")}
 }
-
 
 }
