@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ConexionApiService } from 'src/app/Core/Servicios/conexion-api.service';
-import { debounceTime, Observable, window } from 'rxjs';
+import { debounceTime, Observable } from 'rxjs';
 import { FormControl } from '@angular/forms';
 @Component({
   selector: 'app-contenido',
@@ -20,14 +20,12 @@ constructor(private personajesService: ConexionApiService) {
 
 this.buscarControl.valueChanges.pipe(debounceTime(1000))
   .subscribe((value => {
-    this.personajesService.filtrarPersonajes(value!).subscribe(()=>
-    this.getPersonajes())
+    this.personajesService.filtrarPersonajes(value!)
   }))
-  
 }
   
 getPersonajes(){
-  this.Personajes$ = this.personajesService.obtenerPersonajes();
+  this.Personajes$ = this.personajesService.personajes$;
 }
 
 limpiarInput(){

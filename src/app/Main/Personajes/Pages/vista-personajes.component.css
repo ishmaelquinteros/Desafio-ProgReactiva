@@ -8,6 +8,7 @@ img.mat-card-image{
     background-color:whitesmoke;
     justify-content: space-evenly;
     font-weight: bolder;
+    max-width: 300px;
 }
 .example-form-field{
     width: 100%;
@@ -27,13 +28,8 @@ a:link, a:visited, a:active {
         max-height: 300px;
         width: 350px;   
 }
-/* input.matInput {
-    font-size: 2rem;
-    background-color: aliceblue;
-    color: black;
-} */
+
 example-form-field{
     font-size: 2rem;
-    background-color: antiquewhite;
 }
 }

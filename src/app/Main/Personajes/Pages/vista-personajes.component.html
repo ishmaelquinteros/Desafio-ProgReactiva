@@ -1,12 +1,10 @@
-<div class="contenido--principal grey darken-4">
-<mat-form-field class="example-form-field grey lighten-5">
-  <mat-label >Buscar personajes</mat-label>
-  <input matInput type="text" [formControl]="buscarControl">
-      <!-- <button *ngIf="buscarControl" matSuffix 
-        mat-mini-fab color="primary" (click)="limpiarInput()">
-        <mat-icon>close</mat-icon>
-      </button> -->
-</mat-form-field>
+<div class="grey darken-4">
+<div class="">
+    <mat-form-field class="example-form-field white-text">
+      <label class="white-text"><mat-label>BUSCAR PERSONAJES</mat-label></label>
+       <input style="border:0px" matInput type="text" [formControl]="buscarControl">
+    </mat-form-field>
+</div>
 
 <div class="grid flex-auto align-items-center justify-content-center mt-4 max-w-full">
   <div class="col-fixed sm:min-w-max"  
