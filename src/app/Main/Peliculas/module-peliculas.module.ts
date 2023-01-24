@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { ModulePeliculasRoutingModule } from './module-peliculas-routing.module';
 import { VistaPeliculasComponent } from './Pages/vista-peliculas.component';
+import { ModAngularMaterialModule } from 'src/app/Shared/Modulos/mod-angular-material/mod-angular-material.module';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { VistaPeliculasComponent } from './Pages/vista-peliculas.component';
   ],
   imports: [
     CommonModule,
-    ModulePeliculasRoutingModule
+    ModulePeliculasRoutingModule,
+    ModAngularMaterialModule,
   ]
 })
 export class ModulePeliculasModule { }

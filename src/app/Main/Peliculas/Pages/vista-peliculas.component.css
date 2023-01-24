@@ -1,0 +1,41 @@
+.titulo{
+    font-family: 'Marvel', sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+img.mat-card-image{
+    min-height: 250px;
+    max-height: 250px;
+    max-width: auto;
+}
+.example-card{
+    align-self: center;
+    background-color:whitesmoke;
+    justify-content: space-evenly;
+    font-weight: bolder;
+    max-width: 300px;
+}
+.example-form-field{
+    width: 100%;
+    font-size: 20px;
+}
+a{
+    text-decoration: none;
+    color: aliceblue;
+}
+a:link, a:visited, a:active {
+    text-decoration:none;
+}
+
+@media screen and (max-width: 395px) {
+    img.mat-card-image{
+        min-height: 300px;
+        max-height: 300px;
+        width: 350px;   
+}
+
+example-form-field{
+    font-size: 2rem;
+}
+}

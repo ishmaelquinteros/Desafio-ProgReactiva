@@ -12,6 +12,10 @@ const routes: Routes = [
         path: 'personajes',
         loadChildren: () => import('./Personajes/module-personajes.module').then((module) => module.ModulePersonajesModule)
       },
+      {
+        path: 'series',
+        loadChildren: () => import('./Peliculas/module-peliculas.module').then((module) => module.ModulePeliculasModule)
+      },
     ]
   }
 ];

@@ -1,1 +1,23 @@
-<p>vista-peliculas works!</p>
+
+<div class="grey darken-4 flex">
+  <h3 class="titulo text-align-center white-text">SERIES</h3>
+  <div class="grid flex-auto align-items-center justify-content-center mt-4 max-w-full">
+    <div class="col-fixed sm:min-w-max"  
+      *ngFor="let serie of Series$ | async">
+          <mat-card class="sm:min-w-max align-self-center justify-content-center sm:min-w-max">
+            <mat-card-header>
+              <mat-card-title style="font-size:medium"> {{serie.title}} </mat-card-title>
+            <mat-card-subtitle></mat-card-subtitle>
+          </mat-card-header>
+          <img mat-card-image class="h-3" src="{{serie.thumbnail.path}}.{{serie.thumbnail.extension}}">
+          <mat-card-content>
+            <p></p>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-raised-button color="primary" class="w-10 aling-self-center">
+            <a href="{{serie.urls[0].url}}" target="_blank">Details</a></button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+</div>
