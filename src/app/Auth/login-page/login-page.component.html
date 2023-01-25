@@ -1,1 +1,16 @@
-<p>login-page works!</p>
+<div class="contenedor grey darken-4 flex max-w-full max-h-full">
+      <form [formGroup]="formulario" class="form">
+          <h2 class="login-header">Inicia sesión</h2>
+          <div class="col-12">
+              <mat-label>Correo electrónico</mat-label>
+              <input matInput placeholder="ejemplo@empresa.com" formControlName="email">
+          </div>
+          <div class="col-12">
+              <mat-label>Contraseña</mat-label>
+              <input type="password" matInput placeholder="Contraseña" formControlName="password">
+          </div>
+          <div class="col-12 col-boton">
+            <button mat-raised-button color="primary" (click)="onSubmit()" [disabled]="formulario.invalid">Iniciar sesión</button>
+          </div>
+      </form>
+  </div>

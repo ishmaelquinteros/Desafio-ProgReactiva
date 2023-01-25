@@ -7,9 +7,13 @@ const routes: Routes = [
     loadChildren: () => import('./Main/module-main.module').then((module) => module.ModuleMainModule)
   },
   {
+    path: 'login',
+    loadChildren: () => import('./Auth/modulo-auth.module').then((module) => module.ModuloAuthModule)
+  },
+  {
     path: '**',
-    redirectTo: 'main/personajes'
-  }
+    redirectTo: 'login'
+  },
   ];
 
   @NgModule({
