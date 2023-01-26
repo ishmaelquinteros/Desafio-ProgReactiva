@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { LoginService } from 'src/app/Auth/Service/login.service';
 @Component({
   selector: 'app-navbar',
@@ -7,14 +8,16 @@ import { LoginService } from 'src/app/Auth/Service/login.service';
 })
 export class NavbarComponent implements OnInit {
 
-  token: string | null = ""
+  token: string | null;
   bandera!: boolean
   
   constructor(public login: LoginService) { 
   
-  this.login.getToken() ? this.token = "usuario logueado" : "no se encontro usuario"
-  
-  }
+ this.token = this.login.getToken()
+ this.token ? this.bandera = true : false
+}
+
+
 
   ngOnInit(): void {
   }

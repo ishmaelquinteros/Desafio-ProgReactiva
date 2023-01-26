@@ -2,16 +2,17 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { DashbordComponent } from './dashbord.component';
+import { ControlAccesoGuard } from '../Auth/Guard/control-acceso.guard';
 
 const routes: Routes = [
   {
     path: '',
     component: DashbordComponent,
+    canActivate: [ControlAccesoGuard],
     children: [
       {
         path: 'personajes',
         loadChildren: () => import('./Personajes/module-personajes.module').then((module) => module.ModulePersonajesModule),
-        // canActivate: [GuardControlGuard]
       },
       {
         path: 'series',

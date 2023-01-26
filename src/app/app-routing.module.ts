@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ControlAccesoGuard } from './Auth/Guard/control-acceso.guard';
 
 const routes: Routes = [
   {
     path: 'main',
-    loadChildren: () => import('./Main/module-main.module').then((module) => module.ModuleMainModule)
+    loadChildren: () => import('./Main/module-main.module').then((module) => module.ModuleMainModule),
+    canLoad: [ControlAccesoGuard]    
   },
   {
     path: 'login',
