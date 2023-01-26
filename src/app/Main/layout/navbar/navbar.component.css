@@ -10,3 +10,7 @@
     image-rendering: -webkit-optimize-contrast;
     image-rendering: -moz-crisp-edges;
 }
+.logo--marvel{
+    height: 50px;
+    width: 300px;
+}

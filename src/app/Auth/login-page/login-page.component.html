@@ -9,8 +9,8 @@
               <mat-label>Contraseña</mat-label>
               <input type="password" matInput placeholder="Contraseña" formControlName="password">
           </div>
-          <div class="col-12 col-boton">
-            <button mat-raised-button color="primary" (click)="onSubmit()" [disabled]="formulario.invalid">Iniciar sesión</button>
+          <div class="col-12">
+            <button class="form-button grey darken-2" (click)="login()" [hidden]="formulario.invalid">Iniciar sesión</button>
           </div>
       </form>
   </div>

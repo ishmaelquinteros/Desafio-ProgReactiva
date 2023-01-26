@@ -10,7 +10,8 @@ const routes: Routes = [
     children: [
       {
         path: 'personajes',
-        loadChildren: () => import('./Personajes/module-personajes.module').then((module) => module.ModulePersonajesModule)
+        loadChildren: () => import('./Personajes/module-personajes.module').then((module) => module.ModulePersonajesModule),
+        // canActivate: [GuardControlGuard]
       },
       {
         path: 'series',

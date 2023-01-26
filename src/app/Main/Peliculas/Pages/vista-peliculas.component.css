@@ -1,8 +1,9 @@
 .titulo{
-    font-family: 'Marvel', sans-serif;
     font-size: 2rem;
     font-weight: bold;
     text-align: center;
+    margin: 0;
+    padding-top: 1rem;
 }
 img.mat-card-image{
     min-height: 250px;

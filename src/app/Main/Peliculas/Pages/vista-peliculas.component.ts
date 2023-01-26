@@ -19,6 +19,5 @@ export class VistaPeliculasComponent implements OnInit {
 
   getSeries(){
     this.Series$ = this.serieService.obtenerSeries();
-    console.log(this.Series$)
   }
 }
